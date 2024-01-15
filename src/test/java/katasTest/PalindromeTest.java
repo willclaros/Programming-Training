@@ -17,14 +17,14 @@ class PalindromeTest {
 
     @Test
     public void positiveTestPalindrome() {
-        String word = "oruro";
+        String word = "level";
         boolean actualResult = wordPalindrome.isPalindrome(word);
         Assertions.assertTrue(actualResult);
     }
 
     @Test
     public void negativeTestPalindrome() {
-        String word = "biblioteca";
+        String word = "library";
         boolean actualResult = wordPalindrome.isPalindrome(word);
         Assertions.assertFalse(actualResult);
     }
