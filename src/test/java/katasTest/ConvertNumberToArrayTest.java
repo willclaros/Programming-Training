@@ -16,7 +16,7 @@ public class ConvertNumberToArrayTest {
     }
 
     @Test
-    public void positiveTestPalindrome() {
+    public void positiveTestConvertNumberToArray() {
         long number = 6892365;
         int[] actualResult = convertNumberToArray.digitize(number);
         int[] expectedResult = {5, 6, 3, 2, 9, 8, 6};
@@ -24,11 +24,26 @@ public class ConvertNumberToArrayTest {
     }
 
     @Test
-    public void negativeTestPalindrome() {
-        long number = 159;
+    public void positiveTestConvertNumberToArray2() {
+        long number = 0;
         int[] actualResult = convertNumberToArray.digitize(number);
-        int[] expectedResult = {9, 5, 1};
+        int[] expectedResult = {0};
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
 
+    @Test
+    public void positiveTestConvertNumberToArray3() {
+        long number = 67238;
+        int[] actualResult = convertNumberToArray.digitize(number);
+        int[] expectedResult = {8, 3, 2, 7, 6};
+        Assertions.assertArrayEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void negativeTestConvertNumberToArray() {
+        long number = 68726;
+        int[] actualResult = convertNumberToArray.digitize(number);
+        int[] expectedResult = {6, 8, 7, 2, 6};
+        Assertions.assertNotEquals(expectedResult, actualResult);
+    }
 }
