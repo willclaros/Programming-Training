@@ -1,5 +1,5 @@
 /*
- *   @(#)" ".java
+ *   @(#) ConvertNumberToArray.java
  *
  *   Copyright (c) 2024 Training Foundation.
  *   1945 Av America, Zona Norte, Cochabamba, Bolivia.
@@ -12,7 +12,7 @@
  *   with Training Foundation.
  *
  *   @author Will Claros
- *   @version 26 January 2024
+ *   @version 30 January 2024
  *
  */
 
@@ -24,17 +24,19 @@ import java.util.Collections;
 
 public class ConvertNumberToArray {
 
-    public static int[] digitize(long n) {
-        String newNumber = String.valueOf(new StringBuilder(String.valueOf(n)).reverse());
+    /**
+     * Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+     * Example: 35231 --> [1,3,2,5,3]
+     *
+     * @param number this a random number.
+     * @return this method returns an array from int type
+     */
+    public int[] digitize(long number) {
+        String newNumber = String.valueOf(new StringBuilder(String.valueOf(number)).reverse());
         int [] arrayAux = new int[newNumber.length()];
         for (int i = 0; i<newNumber.length();i++){
             arrayAux[i]= Character.getNumericValue(newNumber.charAt(i));
         }
         return arrayAux;
-    }
-
-    public static void main(String[] args) {
-        long number = 4161;
-        System.out.println(Arrays.toString(ConvertNumberToArray.digitize(number)));
     }
 }
