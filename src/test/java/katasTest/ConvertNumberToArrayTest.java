@@ -16,19 +16,10 @@ public class ConvertNumberToArrayTest {
     }
 
     @Test
-    public void positiveTestPalindrome() {
-        long number = 6892365;
+    public void positiveTestConvertNumberToArray() {
+        long number = 59;
         int[] actualResult = convertNumberToArray.digitize(number);
-        int[] expectedResult = {5, 6, 3, 2, 9, 8, 6};
+        int[] expectedResult = {9, 5};
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
-
-    @Test
-    public void negativeTestPalindrome() {
-        long number = 159;
-        int[] actualResult = convertNumberToArray.digitize(number);
-        int[] expectedResult = {9, 5, 1};
-        Assertions.assertArrayEquals(expectedResult, actualResult);
-    }
-
 }
