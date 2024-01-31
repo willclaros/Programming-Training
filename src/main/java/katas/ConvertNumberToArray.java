@@ -18,10 +18,6 @@
 
 package katas;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Collections;
-
 public class ConvertNumberToArray {
 
     /**
@@ -33,9 +29,9 @@ public class ConvertNumberToArray {
      */
     public int[] digitize(long number) {
         String newNumber = String.valueOf(new StringBuilder(String.valueOf(number)).reverse());
-        int [] arrayAux = new int[newNumber.length()];
-        for (int i = 0; i<newNumber.length();i++){
-            arrayAux[i]= Character.getNumericValue(newNumber.charAt(i));
+        int[] arrayAux = new int[newNumber.length()];
+        for (int i = 0; i < newNumber.length(); i++) {
+            arrayAux[i] = Character.getNumericValue(newNumber.charAt(i));
         }
         return arrayAux;
     }
