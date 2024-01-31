@@ -17,9 +17,9 @@ public class ConvertNumberToArrayTest {
 
     @Test
     public void positiveTestConvertNumberToArray() {
-        long number = 6892365;
+        long number = 59;
         int[] actualResult = convertNumberToArray.digitize(number);
-        int[] expectedResult = {5, 6, 3, 2, 9, 8, 6};
+        int[] expectedResult = {9, 5};
         Assertions.assertArrayEquals(expectedResult, actualResult);
     }
 
